@@ -4,141 +4,134 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Samuel Pérez | Ingeniero de Sistemas y Desarrollador Full Stack</title>
+    <!-- Vinculación del archivo CSS externo -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Motor de Tailwind -->
     <script src="https://tailwindcss.com"></script>
-    <style>
-        .custom-card, .project-card {
-            background: rgba(15, 23, 42, 0.75);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(51, 65, 85, 0.6);
-            border-radius: 1rem;
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
-            transition: transform 0.25s ease, border-color 0.25s ease;
-        }
-        .custom-card:hover, .project-card:hover {
-            border-color: rgba(56, 189, 248, 0.45);
-        }
-        .project-card { padding: 1.5rem; }
-        .project-card:hover { transform: translateY(-3px); }
-        .text-title { color: #f8fafc; }
-        .section-title {
-            font-size: 0.9rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            color: #f8fafc;
-            margin-bottom: 1rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 1px solid rgba(51, 65, 85, 0.6);
-        }
-        .status-pill {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            background: rgba(16, 185, 129, 0.12);
-            border: 1px solid rgba(16, 185, 129, 0.35);
-            color: #34d399;
-            padding: 0.45rem 0.9rem;
-            border-radius: 9999px;
-        }
-        .badge {
-            display: inline-block;
-            background: rgba(30, 41, 59, 0.85);
-            border: 1px solid rgba(71, 85, 105, 0.5);
-            color: #e2e8f0;
-            padding: 0.35rem 0.75rem;
-            border-radius: 0.5rem;
-            font-size: 0.8rem;
-            font-weight: 500;
-            transition: all 0.2s ease;
-        }
-        .badge:hover {
-            border-color: rgba(56, 189, 248, 0.6);
-            transform: translateY(-1px);
-        }
-    </style>
 </head>
-<body class="bg-[#0b1329] text-slate-200 font-sans antialiased relative overflow-x-hidden min-h-screen pb-16">
+<body id="theme-body" class="bg-[#0b1329] text-slate-200 font-sans antialiased relative overflow-x-hidden min-h-screen pb-16 transition-colors duration-300">
+
+    <!-- CONTENEDOR PRINCIPAL -->
     <main class="max-w-4xl mx-auto px-4 sm:px-6 mt-12 relative z-10">
+        
+        <!-- ENCABEZADO CON EFECTO DE CRISTAL -->
         <header class="custom-card p-8 relative overflow-hidden mb-8">
             <div class="absolute top-0 left-0 w-full h-[4px] bg-gradient-to-r from-blue-500 via-cyan-400 to-emerald-400"></div>
+            
             <div class="flex flex-col md:flex-row justify-between items-center gap-6">
                 <div class="text-center md:text-left">
-                    <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight text-title mb-2">Samuel Andrés Abella Pérez</h1>
-                    <p class="text-cyan-400 font-medium tracking-wide text-sm md:text-base">Estudiante de Ingeniería de Sistemas &amp; Desarrollador Web Full Stack</p>
+                    <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight text-title mb-2">
+                        Samuel Andrés Abella Pérez
+                    </h1>
+                    <p class="text-cyan-400 dark-text-cyan font-medium tracking-wide text-sm md:text-base">
+                        Estudiante de Ingeniería de Sistemas & Desarrollador Web Full Stack
+                    </p>
                     <div class="flex flex-wrap justify-center md:justify-start items-center gap-x-4 gap-y-1 text-xs text-slate-400 mt-3">
-                        <span>Sogamoso, Boyacá – Remoto</span>
+                        <span>📍 Sogamoso, Boyacá, Colombia</span>
                         <span>•</span>
                         <a href="tel:+573107242139" class="hover:text-cyan-400 transition">📞 +57 310 724 2139</a>
                         <span>•</span>
                         <a href="mailto:samison2001@outlook.com" class="hover:text-cyan-400 transition">✉️ samison2001@outlook.com</a>
                     </div>
                 </div>
+
                 <div class="status-pill">
                     <span class="relative flex h-2 w-2">
                         <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                         <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
                     </span>
-                    <span class="text-xs font-semibold tracking-wide uppercase">Disponible Junior</span>
+                    <span class="text-xs font-semibold tracking-wide uppercase">Disponible para Pasantías / Junior</span>
                 </div>
             </div>
+
+            <!-- ENLACES TÉCNICOS -->
             <div class="flex flex-wrap gap-3 mt-6 pt-6 border-t border-slate-800/80">
-                <a href="https://github.com" target="_blank" class="badge">GitHub (@FlipperSAM)</a>
-                <a href="https://linkedin.com" target="_blank" class="badge">LinkedIn</a>
-                <a href="https://github.io" target="_blank" class="badge border-blue-500/30 text-cyan-400 font-semibold">Demo Web Animada</a>
+                <a href="https://github.com/FlipperSAM" target="_blank" class="badge">github.com</a>
+                <a href="https://www.linkedin.com/in/samuel-andres-abella-perez-937a51425/" target="_blank" class="badge">linkedin.com</a>
+                <a href="https://flippersam.github.io/samuelperez.github.io/" target="_blank" class="badge border-blue-500/30 text-cyan-400 font-semibold">samuelabella.dev</a>
             </div>
         </header>
 
+        <!-- GRID DE DOS COLUMNAS -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <!-- COLUMNA IZQUIERDA -->
             <div class="md:col-span-1 space-y-6">
                 <section class="custom-card p-6">
                     <h2 class="section-title">Perfil</h2>
                     <p class="text-sm text-slate-400 leading-relaxed text-justify">
-                        Estudiante de Ingeniería de Sistemas enfocado en desarrollo web interactivo, aplicaciones dinámicas con JavaScript/React y buenas prácticas de código.
+                        Estudiante de Ingeniería de Sistemas apasionado por el desarrollo de software, la lógica matemática y la creación de interfaces de usuario altamente interactivas. Experiencia construyendo aplicaciones web dinámicas y reactivas mediante la manipulación avanzada del DOM, animaciones con JavaScript y el ecosistema Full Stack (MERN / Python). Enfoque técnico demostrado en el diseño de componentes visuales interactivos que responden a eventos del usuario, acoplados a buenas prácticas de código limpio, patrones de diseño y seguridad.
+
+
                     </p>
                 </section>
+
                 <section class="custom-card p-6">
-                    <h2 class="section-title">Educación</h2>
+                    <h2 class="section-title">Idiomas</h2>
                     <div class="space-y-3 text-sm">
                         <div>
-                            <p class="font-semibold text-title">Ingeniería de Sistemas (7.º Sem.)</p>
-                            <p class="text-xs text-slate-400">UNAD • 2023 – Presente</p>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium text-title">- Español</span>
+                                <span class="text-xs text-slate-500">Nativo</span>
+                            </div>
+                            <div class="w-full bg-slate-800 h-1.5 rounded-full overflow-hidden">
+                                <div class="bg-gradient-to-r from-blue-500 to-cyan-400 h-full w-full"></div>
+                            </div>
                         </div>
                         <div>
-                            <p class="font-semibold text-title">Máster Web Full Stack</p>
-                            <p class="text-xs text-slate-400">Conquer Blocks • 2025</p>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium text-title">- Inglés</span>
+                                <span class="text-xs text-cyan-400"></span>
+                            </div>
+                            <div class="w-full bg-slate-800 h-1.5 rounded-full overflow-hidden">
+                                <div class="bg-gradient-to-r from-blue-500 to-cyan-400 h-full w-[75%]"></div>
+                            </div>
                         </div>
                     </div>
                 </section>
             </div>
 
+            <!-- COLUMNA DERECHA -->
             <div class="md:col-span-2 space-y-6">
                 <section class="custom-card p-6">
                     <h2 class="section-title">Stack Tecnológico</h2>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="badge">HTML5</span>
-                        <span class="badge">CSS3</span>
-                        <span class="badge text-cyan-400">JavaScript</span>
-                        <span class="badge text-cyan-400">React.js</span>
-                        <span class="badge text-emerald-400">Python</span>
-                        <span class="badge text-emerald-400">Django</span>
-                        <span class="badge text-purple-400">PostgreSQL</span>
-                        <span class="badge">Git / GitHub</span>
-                    </div>
-                </section>
-                <section class="space-y-4">
-                    <h2 class="section-title px-1">Proyectos Destacados</h2>
-                    <div class="project-card">
-                        <div class="flex flex-wrap justify-between items-start gap-2 mb-3">
-                            <h3 class="font-bold text-title text-base">Página Web Animada</h3>
-                            <a href="https://github.io" target="_blank" class="text-xs text-cyan-400 hover:underline font-semibold">Ver Demo</a>
+                    <div class="space-y-3">
+                        <div>
+                            <span class="text-xs font-semibold text-slate-500 uppercase block mb-1.5">Frontend + IA</span>
+                            <div class="flex flex-wrap gap-1.5">
+                                <span class="badge">HTML5</span><span class="badge">CSS3</span>
+                                <span class="badge text-cyan-400">JavaScript</span><span class="badge text-cyan-400">React.js</span>
+                                <span class="badge text-cyan-400">Diseño con IA</span>
+                            </div>
                         </div>
-                        <p class="text-sm text-slate-400 leading-relaxed text-justify">
-                            Interfaz interactiva con manipulación del DOM, animaciones basadas en el cursor y autenticación segura.
-                        </p>
+                        <div>
+                            <span class="text-xs font-semibold text-slate-500 uppercase block mb-1.5">Backend & DB</span>
+                            <div class="flex flex-wrap gap-1.5">
+                                <span class="badge text-emerald-400">Django</span><span class="badge text-emerald-400">Agentes CLI</span>
+                                <span class="badge text-purple-400">SQL</span><span class="badge text-purple-400">PostgreSQL</span>
+                                <span class="badge text-cyan-400">SEO</span>
+                            </div>
+                        </div>
                     </div>
                 </section>
-            </div>
-        </div>
-    </main>
-</body>
-</html>
+
+                <!-- PROYECTOS -->
+                <section class="space-y-4">
+                    <h2 class="section-title px-2">Proyectos Destacados</h2>
+                    <div class="project-card group">
+                        <div class="flex justify-between items-start gap-2 mb-2">
+                            <h3 class="font-bold text-title card-title text-base">Proyectos Developer Full Stack</h3>
+                            <a href="https://flippersam.github.io/PaginaWEB-Animada/" target="_blank" class="text-xs text-blue-400 hover:underline">🔗 Pagina Web Animada - Sam</a>
+                        </div>
+                        <p class="text-sm text-slate-400">Desarrollé una interfaz web interactiva de inicio de sesión y registro simulando un entorno seguro mediante la manipulación dinámica del DOM con JavaScript nativo, diseñé componentes visuales reactivos e implementé lógica matemática para que las figuras geométricas sigan el movimiento del cursor e interactúen con el foco de los inputs e implementé autenticación segura mediante JWT, manejo de sesiones y encriptación de credenciales con bcrypt en el flujo de la aplicación.</p>
+                    </div>
+                </section>
+
+                <!-- FORMULARIO DE CONTACTO REAL -->
+                <section class="custom-card p-6">
+                    <h2 class="section-title">Contacto Directo</h2>
+                    <p class="text-xs text-slate-400 mb-4">¿Te interesa mi perfil? Envíame un mensaje!</p>
+                    <p class="text-xs text-slate-400 mb-4"></p>
+                    <h3 class="section-title">samison2001@outlook.com</h3>
+                    <p class="text-xs text-slate-400 mb-4"></p>
+                   
